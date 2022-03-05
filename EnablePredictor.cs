@@ -8,7 +8,7 @@ using System.Management.Automation.Subsystem.Prediction;
 
 namespace Megasware128.Predictor
 {
-    [Cmdlet("Enable", "CarapacePredictor")]
+    [Cmdlet(VerbsLifecycle.Enable, nameof(CarapacePredictor))]
     [OutputType(typeof(void))]
     public class EnablePredictor : PSCmdlet
     {
