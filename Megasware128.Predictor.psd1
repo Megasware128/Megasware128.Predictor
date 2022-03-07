@@ -68,7 +68,7 @@ Copyright = '(c) 2022 Unknown. All rights reserved.'
 FunctionsToExport = @()
 
 # Cmdlets to export from this module, for best performance, do not use wildcards and do not delete the entry, use an empty array if there are no cmdlets to export.
-CmdletsToExport = @('Enable-CarapacePredictor')
+CmdletsToExport = @('Enable-CarapacePredictor','Test-CarapacePredictor')
 
 # Variables to export from this module
 VariablesToExport = @()
@@ -91,7 +91,7 @@ PrivateData = @{
     PSData = @{
 
         # Tags applied to this module. These help with module discovery in online galleries.
-        # Tags = @()
+        Tags = @('Windows')
 
         # A URL to the license for this module.
         # LicenseUri = ''
