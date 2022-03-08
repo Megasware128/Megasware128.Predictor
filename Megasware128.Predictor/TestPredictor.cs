@@ -1,10 +1,7 @@
-using System;
-using System.Linq;
 using System.Management.Automation;
 using System.Management.Automation.Language;
 using System.Management.Automation.Subsystem;
 using System.Management.Automation.Subsystem.Prediction;
-using System.Threading;
 
 namespace Megasware128.Predictor
 {
