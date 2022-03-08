@@ -84,10 +84,17 @@ class CarapacePredictor : ICommandPredictor
             for (int i = 0; i < suggestions.Length; i++)
             {
                 var suggestion = suggestions[i];
-                if (suggestion.Name.StartsWith(context.TokenAtCursor.Text))
+                var commandAtCursor = commandName == context.InputAst.Extent.Text.TrimEnd(); // TODO: this is a hack
+
+                if (commandAtCursor)
+                {
+                    list.Add(new PredictiveSuggestion($"{commandName} {suggestion.Name}", suggestion.Description));
+                }
+                else if (suggestion.Name.StartsWith(context.TokenAtCursor.Text))
                 {
                     list.Add(new PredictiveSuggestion(context.InputAst.Extent.Text.Replace(context.TokenAtCursor.Text, suggestion.Name), suggestion.Description));
                 }
+
             }
 
             return new SuggestionPackage(list);
